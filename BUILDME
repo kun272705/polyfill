@@ -25,3 +25,4 @@ if [[ -f src/polyfill.js ]]; then
 fi
 
 printf "Done\n"
+

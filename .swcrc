@@ -1,8 +1,7 @@
 {
   "env": {
     "mode": "entry",
-    "coreJs": "3.49",
-    "bugfixes": true
+    "coreJs": "3.49"
   }
 }
 

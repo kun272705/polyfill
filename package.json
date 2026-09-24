@@ -7,6 +7,10 @@
     "core-js": "^3.50.0",
     "regenerator-runtime": "^0.14.1",
     "rolldown": "^1.2.10"
+  },
+  "allowScripts": {
+    "@swc/core@1.16.2": true,
+    "core-js@3.50.0": true
   }
 }
 

@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "devDependencies": {
     "@swc/cli": "^0.8.1",
-    "@swc/core": "^1.16.13",
+    "@swc/core": "^1.16.18",
     "core-js": "^3.50.0",
     "regenerator-runtime": "^0.14.1",
     "rolldown": "^1.2.13"
   },
   "allowScripts": {
-    "@swc/core@1.16.13": true,
+    "@swc/core@1.16.18": true,
     "core-js@3.50.0": true
   }
 }

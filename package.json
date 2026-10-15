@@ -6,11 +6,11 @@
     "@swc/core": "^1.16.18",
     "core-js": "^3.50.0",
     "regenerator-runtime": "^0.14.1",
-    "rolldown": "^1.2.13"
+    "rolldown": "^1.2.13",
+    "terser": "^5.51.2"
   },
   "allowScripts": {
     "@swc/core@1.16.18": true,
     "core-js@3.50.0": true
   }
 }
-

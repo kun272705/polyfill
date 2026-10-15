@@ -10,17 +10,20 @@ if [[ -f src/polyfill.js ]]; then
 
   npx swc src/polyfill.js -o dst/polyfill.optimized.js
 
+  npx rolldown dst/polyfill.optimized.js -o dst/polyfill.combined.js -f iife
+
   if [[ "${MODE:-development}" == production ]]; then
 
-    npx rolldown dst/polyfill.optimized.js -o dst/polyfill.js -f iife -m
+    npx terser dst/polyfill.combined.js -c -o dst/polyfill.js
 
   else
 
-    npx rolldown dst/polyfill.optimized.js -o dst/polyfill.js -f iife
+    cp dst/polyfill.combined.js dst/polyfill.js
 
   fi
 
   rm dst/polyfill.optimized.js
+  rm dst/polyfill.combined.js
 
 fi
 

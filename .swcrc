@@ -1,7 +1,7 @@
 {
   "env": {
     "mode": "entry",
-    "coreJs": "3.50.0"
+    "coreJs": "3.51.0"
   }
 }
 

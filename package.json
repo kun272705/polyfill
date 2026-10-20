@@ -11,6 +11,6 @@
   },
   "allowScripts": {
     "@swc/core@1.16.18": true,
-    "core-js@3.50.0": true
+    "core-js@3.51.0": true
   }
 }

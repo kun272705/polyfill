@@ -4,26 +4,26 @@ set -euo pipefail
 
 if [[ -f src/polyfill.js ]]; then
 
-  printf "Building src/polyfill.js\n"
+	printf "Building src/polyfill.js\n"
 
-  mkdir -p dst/
+	mkdir -p dst/
 
-  npx swc src/polyfill.js -o dst/polyfill.optimized.js
+	npx swc src/polyfill.js -o dst/polyfill.optimized.js
 
-  npx rolldown dst/polyfill.optimized.js -o dst/polyfill.combined.js -f iife
+	npx rolldown dst/polyfill.optimized.js -o dst/polyfill.combined.js -f iife
 
-  if [[ "${MODE:-development}" == production ]]; then
+	if [[ "${MODE:-development}" == production ]]; then
 
-    npx terser dst/polyfill.combined.js -c -o dst/polyfill.js
+		npx terser dst/polyfill.combined.js -c -o dst/polyfill.js
 
-  else
+	else
 
-    cp dst/polyfill.combined.js dst/polyfill.js
+		cp dst/polyfill.combined.js dst/polyfill.js
 
-  fi
+	fi
 
-  rm dst/polyfill.optimized.js
-  rm dst/polyfill.combined.js
+	rm dst/polyfill.optimized.js
+	rm dst/polyfill.combined.js
 
 fi
 
